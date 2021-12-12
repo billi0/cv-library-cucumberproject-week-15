@@ -1,4 +1,4 @@
-package uk.co.library.cucumber;
+package uk.co.library.cucumber.runners;
 
 import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
@@ -11,11 +11,11 @@ import org.junit.runner.RunWith;
         features = "src/test/java/resources/featurefile",
         plugin = {"pretty", "html:target/cucumber-report/cucumber.html",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/Extent_Reports/report.html",
-                "json:target/RunCuke/cucumber.json"},
-        tags = "@Regression"
+                "json:target/RunCuke/cucumber.json"}
+       // tags = "@Smoke"
 )
 
-public class Regression {
+public class TestRunner {
 
     @AfterClass
     public static void setUp() {
